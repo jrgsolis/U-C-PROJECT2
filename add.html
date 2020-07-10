@@ -66,18 +66,18 @@
     // Question: What does this code do?
     $("#add-btn").on("click", function(event) {
       event.preventDefault();
-      var newCharacter = {
-        name: $("#name").val().trim(),
-        role: $("#role").val().trim(),
-        age: $("#age").val().trim(),
-        forcePoints: $("#force-points").val().trim()
+      var newListing = {
+        name: $("#title").val().trim(),
+        condition: $("#condition").val().trim(),
+        description: $("#description").val().trim(),
+        price: $("#price").val().trim()
       };
 
       // Question: What does this code do??
       $.post("/api/listings", newListing)
         .then(function(data) {
           console.log("add.html", data);
-          alert("Adding character...");
+          alert("Adding your Listing...");
         });
     });
   </script>

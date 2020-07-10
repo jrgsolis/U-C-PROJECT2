@@ -12,25 +12,24 @@ var PORT = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Star Wars Characters (DATA)
 // =============================================================
 var listings = [
   {
-    Title: "Super Smash Bros. Ultimate",
+    Title: "smash",
     name: "Super Smash Bros. Ultimate",
     condition: "New",
     description: "Game works perfectly fine, box has no manual",
     price: 35
   },
   {
-    Title: "Halo 3",
+    Title: "halo",
     name: "Halo 3",
     condition: "Used",
     description: "Game works fine, box has no manual and disc is a bit scratched",
     price: 10
   },
   {
-    Title: "Call Of Duty: Modern Warfare",
+    Title: "cod",
     name: "Call Of Duty: Modern Warfare",
     condition: "New",
     description: "Literally just bought it, just dont have time to play it",
@@ -50,27 +49,26 @@ app.get("/add", function(req, res) {
   res.sendFile(path.join(__dirname, "add.html"));
 });
 
-// Displays all characters
+// Displays all listings
 app.get("/api/listings", function(req, res) {
-  return res.json(characters);
+  return res.json(listings);
 });
 
 // Displays a single character, or returns false
-app.get("/api/listings/:Title", function(req, res) {
-  var chosen = req.params.character;
+app.get("/api/listings/:listing", function(req, res) {
+  var chosen = req.params.listing;
 
   console.log(chosen);
 
   for (var i = 0; i < listings.length; i++) {
-    if (chosen === characters[i].routeName) {
-      return res.json(characters[i]);
+    if (chosen === listings[i].Title) {
+      return res.json(listings[i]);
     }
   }
 
   return res.json(false);
 });
 
-// Create New Characters - takes in JSON input
 app.post("/api/listings", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body parsing middleware
@@ -82,7 +80,7 @@ app.post("/api/listings", function(req, res) {
 
   console.log(newListing);
 
-  characters.push(newListing);
+  listings.push(newListing);
 
   res.json(newListing);
 });

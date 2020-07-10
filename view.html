@@ -45,6 +45,22 @@
           </div>
         </div>
 
+        <div class="card">
+          <div class="card-header">
+            <h3><strong> Current Listings</strong></h3>
+          </div>
+          <div class="card-body">
+            <h2 id="name"></h2>
+            <div id="details">
+              <h3><strong>Condition: </strong> <span id="condition"></span></h3>
+              <h3><strong>Description: </strong> <span id="description"></span></h3>
+              <h3><strong>Price: </strong> <span id="price"></span></h3>
+            </div>
+          </div>
+        </div>
+      <br>
+        
+
       </div>
     </div>
   </div>
@@ -60,15 +76,14 @@
       $.get("/api/listings/" + searchedGame, function(data) {
         console.log(data);
         if (data) {
-          $("#stats").show();
+          $("#details").show();
           $("#name").text(data.name);
-          $("#role").text(data.role);
-          $("#age").text(data.age);
-          $("#force-points").text(data.forcePoints);
+          $("#condition").text(data.condition);
+          $("#description").text(data.description);
+          $("#price").text(data.price);
         } else {
-          $("#name").text(
-            "The force is not strong with this one. Your character was not found.");
-          $("#stats").hide();
+          $("#name").text("No listing found under that title. :c ");
+          $("#details").hide();
         }
       });
     });
