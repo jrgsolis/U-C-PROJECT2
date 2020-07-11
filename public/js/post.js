@@ -59,10 +59,10 @@ $(document).ready(function() {
     }
   }
 
-  // Submits a new post and brings user to blog page upon completion
+  // Submits a new post and brings user to dashboard page upon completion
   function submitPost(post) {
     $.post("/api/posts", post, function() {
-      window.location.href = "/blog";
+      window.location.href = "/dashboard";
     });
   }
 
@@ -122,7 +122,7 @@ $(document).ready(function() {
     return listOption;
   }
 
-  // Update a given post, bring user to the blog page when done
+  // Update a given post, bring user to the dashboard page when done
   function updatePost(post) {
     $.ajax({
       method: "PUT",
@@ -130,7 +130,7 @@ $(document).ready(function() {
       data: post
     })
     .then(function() {
-      window.location.href = "/blog";
+      window.location.href = "/dashboard";
     });
   }
 });

@@ -1,8 +1,8 @@
 $(document).ready(function() {
   /* global moment */
 
-  // blogContainer holds all of our posts
-  var blogContainer = $(".blog-container");
+  // dashboardContainer holds all of our posts
+  var dashboardContainer = $(".dashboard-container");
   var postCategorySelect = $("#category");
   // Click events for the edit and delete buttons
   $(document).on("click", "button.delete", handlePostDelete);
@@ -43,12 +43,23 @@ $(document).ready(function() {
     if (id) {
       partial = " for Condition #" + id;
     }
-    blogContainer.empty();
+    dashboardContainer.empty();
     var messageh2 = $("<h2>");
     messageh2.css({ "text-align": "center", "margin-top": "50px" });
     messageh2.html("No posts yet" + partial + ", navigate <a href='/cms" + query +
     "'>here</a> in order to get started.");
-    blogContainer.append(messageh2);
+    dashboardContainer.append(messageh2);
   }
 
+});
+
+$("#search-btn").on("click", function() {
+  var searchedGame = $("#game-search").val().trim();
+  searchedGame = searchedGame.replace(/\s+/g, "").toLowerCase();
+  /*
+  $.get("/api/search/" , function(data) {
+    console.log(data);
+  });
+  */
+ window.location.href = "/api/search/";
 });

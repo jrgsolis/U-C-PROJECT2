@@ -7,6 +7,7 @@ const router = express.Router();
 // Routes
 // =============================================================
 
+
 // GET route for getting all of the posts
 router.get("/api/posts", function (req, res) {
   var query = {};
