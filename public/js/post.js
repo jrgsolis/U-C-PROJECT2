@@ -62,7 +62,7 @@ $(document).ready(function() {
   // Submits a new post and brings user to dashboard page upon completion
   function submitPost(post) {
     $.post("/api/posts", post, function() {
-      window.location.href = "/dashboard";
+      window.location.href = "/listings";
     });
   }
 
@@ -79,7 +79,7 @@ $(document).ready(function() {
       default:
         return;
     }
-    $.get(queryUrl, function(data) {
+      $.get(queryUrl, function(data) {
       if (data) {
         console.log(data.ConditionId || data.id)
         // If this post exists, prefill our cms forms with its data
@@ -130,7 +130,7 @@ $(document).ready(function() {
       data: post
     })
     .then(function() {
-      window.location.href = "/dashboard";
+      window.location.href = "/listings";
     });
   }
 });
