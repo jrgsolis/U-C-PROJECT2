@@ -1,16 +1,23 @@
-    <div class="row">
-      <div class="col-10">
-        <input class="form-control mr-sm-2" type="search" id="gameTitle" placeholder="Search" aria-label="Search" />
-      </div>
-      <div class="col-2">
-        <button class="btn btn-outline-warning" type="submit" id="submitBtn" onclick="getGameCards()">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
-    </div>
+<div class="container is-fullhd">
+      <div class="container is-fluid">
+        <div class="hero-body">
+          <div class="columns">
+            
+            <div class="column is-3">
+                <button class="button is-link is-inverted" type="submit" id="submitBtn" onclick="getGameCards()">
+                  <i class="fas fa-search" > Search</i>
+                </button>
+            </div>
 
+                <div class="column is-three-fifths">
+                  <input class="input" type="search" id="gameTitle" placeholder="What game are you looking?" aria-label="Search" />
+                </div>
 
-  <div class="nav-btns">
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-btns">
     <div class="row">
       <div class="col-6"><button class="btn btn-outline-warning" type="submit" id="prevBtn" onclick="toPrevPage()"
           disabled>
@@ -22,9 +29,13 @@
         </button></div>
     </div>
   </div>
+</div>
+
+    </div>
+      
 
   <div id="root"></div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="js/bootstrap.min.js"></script>
   <script src="js/search_game.js"></script>
   <script src="js/game.js"></script>
+ 
