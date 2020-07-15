@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,6 +24,7 @@ body {
   font-family: "Be Vietnam", sans-serif;
 
 }
+
 
 #root {
   max-width: 1200px;

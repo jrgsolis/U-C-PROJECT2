@@ -1,38 +1,67 @@
-module.exports = function(sequelize, DataTypes) {
-  
-  // 'Post' in the define method, will be the name
-  // of the table created in the db
-  const Post = sequelize.define("Post", {
-    // you do not need to define an id
-    // sequelize does that for you
+module.exports = function (sequelize, DataTypes) {
 
+
+  const Post = sequelize.define("Post", {
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
       }
     },
     body: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
       len: [1]
     },
     price: {
-      type: DataTypes.DECIMAL(10, 2)  ,
-      allowNull: false
-    }
+      type: DataTypes.DECIMAL(10, 2),
+      allowNull: true
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    slug: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    description_raw: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
+    metacritic: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    released: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    background_image: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
+    website: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    gameId: {
+      type: DataTypes.BIGINT,
+      allowNull: true,
+    },
   });
 
 
-
-
-  // set up associations if you want to use includes
-  // when serving up json from your routes
-  
-  Post.associate = function(models) {
-    // We're saying that a Post should belong to an Condition
-    // A Post can't be created without an Condition due to the foreign key constraint
+  Post.associate = function (models) {
     Post.belongsTo(models.Condition, {
       foreignKey: {
         allowNull: false

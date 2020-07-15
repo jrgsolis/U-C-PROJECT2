@@ -3,8 +3,6 @@ const router = require('express').Router();
 const db = require("../models");
 
 
-//router.get('/', renderDashBoard);
-//router.get('/dashboard', renderDashBoard);
 router.get('/listings', renderListings);
 router.get('/search', renderSearch);
 
