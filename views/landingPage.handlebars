@@ -1,10 +1,69 @@
-<p class="rawg">Here will go the landing page</a></p>
+<style>
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
 
-<div class="column is-3 rawg">
-    jennifer is working 
+.fullscreen-bg__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('../img/ubergame_bg.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+}
+
+.content {
+  position: fixed;
+  bottom: -1;
+  background: rgba(228, 228, 228, 0.543);
+  color: black;
+  width: 100%;
+  padding: 20px;
+}
+
+</style>
+
+    <div class="fullscreen-bg">
+    <video loop muted autoplay poster="../img/ubergame_bg.jpg" class="fullscreen-bg__video" id="myVideo">
+        <source src="../video/supermario.webm" type="video/webm">
+        <source src="../video/supermario.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
+  <h1 style = "text-align: center">UBER GAMES</h1>
+  <p style = "text-align: center";>The greatest resource for buying games!</p>
+  <div class="column is-11 is-offset-4">
+    <a href="/post"><button class="button"><span class="fa fa-plus" ></span>Add New Listing</button></a>
+    <a href="/listings"><button class="button"><span class="fa fa-eye"></span>All listings</button></a>
+    </div>
 </div>
 
+</div>
 
+<script>
+document.getElementById("myVideo").currentTime = 45;
+</script>
 
   
 
