@@ -6,23 +6,26 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
   background-image: url("../img/ubergame_bg.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+
   background-size: cover;
   background-position: center center;
   background-color: #222020;
+  
   height: 100%;
   width: 100%;
   padding-top: 50px;
   padding-bottom: 10px;
   color: #e4e6e0;
   font-family: "Be Vietnam", sans-serif;
-
 }
 
 
