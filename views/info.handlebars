@@ -1,0 +1,22 @@
+<div>
+
+    {{#if fromDB}}
+    <h2>{{oneGame.title}} </h2>
+    {{else}}
+    <h2>{{theTitle}} </h2>
+    {{/if}}
+
+
+    <div>
+        {{#if fromDB}}
+        <img class="gameImg" src="{{oneGame.image}}" alt="gameImg-poster" />
+        {{else}}
+        <img class="gameImg" src="{{oneGame.posterImage.original}}" alt="gameImg-poster" />
+        {{/if}}
+        <p>{{oneGame.synopsis}}</p>
+        <h6>Developer: {{oneGame.developer}} </h6>
+        <h6>Metacritic: {{oneGame.metacritic}} </h6>
+        <h6>Release Date: {{oneGame.releaseDate}}</h6>
+    </div>
+
+</div>

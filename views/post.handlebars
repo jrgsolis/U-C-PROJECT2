@@ -1,50 +1,41 @@
-<div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="card">
-          <div class="card-header">
-            <h3><strong>Add Listing</strong></h3>
-          </div>
-          <div class="card-body">
-            <form id="cms">
+<div class="container is-fullhd">
+      <div class="container is-fluid">
+        <div class="hero-body">
+          <div class="columns">
+            
+            <div class="column is-3">
+                <button class="button is-link is-inverted" type="submit" id="submitBtn" onclick="getGameCards()">
+                  <i class="fas fa-search" > Search</i>
+                </button>
+            </div>
 
-              <div class="form-group">
-                <label for="gametitle">Game Title</label>
-                <input type="text" class="form-control" id="title">
-              </div>
+                <div class="column is-three-fifths">
+                  <input class="input" type="search" id="gameTitle" placeholder="What game are you looking?" aria-label="Search" />
+                </div>
 
-
-              <div class="form-group">
-                <label for="description">Description</label>
-                <input type="text" class="form-control" id="body">
-              </div>
-
-              <div class="form-group">
-                <label for="price"> Price </label>
-                <input type="text" class="form-control" id="price">
-              </div>
-
-             
-              <div class="form-group">
-                <label for="category">Condition:</label>
-                <select class="form-control" id="condition">
-                </select>
-              </div>
-              <br>
-              <div class="text-right">
-                <button type="submit" class="btn btn-success submit">Submit</button>
-              </div>
-            </form>
           </div>
         </div>
-
       </div>
+
+      <div class="nav-btns">
+    <div class="row">
+      <div class="col-6"><button class="btn btn-outline-warning" type="submit" id="prevBtn" onclick="toPrevPage()"
+          disabled>
+          <i class="fas fa-angle-left"></i>
+        </button></div>
+      <div class="col-6"><button class="btn btn-outline-warning" type="submit" id="nextBtn" onclick="toNextPage()"
+          disabled>
+          <i class="fas fa-angle-right"></i>
+        </button></div>
     </div>
   </div>
+</div>
 
-<!-- Custom Script -->
-<script src="js/post.js" type="text/javascript"></script>
+    </div>
+      
 
-
-
-  
+  <div id="root"></div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="js/search_game.js"></script>
+  <script src="js/game.js"></script>
+ 
