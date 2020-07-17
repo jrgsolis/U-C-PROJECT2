@@ -19,7 +19,115 @@
         </div>
       </div>
 
+<div id="gameName" style="text-align: center; color:white; font-size: 30px; background-color:black;"> </div>
+<img src="" alt="" id="gameIMG" style="height: 400px; width:600px; float:initial" />
 
+<div class="column is-half is-offset-one-quarter">
+
+  <ul>
+    <li id="gameDetails" ></li>
+    </ul>
+
+    <div style="align: center;">
+    
+    <div>
+      <h5 id="gameGenre"></h5>
+    </div>
+    <div>
+      <h5 id="gamePlatform"></h5>
+    </div>
+    
+    </div>
+
+    <ul>
+    <li id="gameMetacritic"></li>
+    </ul>
+
+</div>
+
+
+<div class="container is-fluid">
+  <div class="hero-body">
+
+<section class="section">
+  <div class="columns">
+    
+    <div class="column is-1">
+    <div class="notification">
+
+    <form id="cms">
+      <h1 style="text-align: center;">Post Listing</h1>
+      <br>
+      
+      <div class="field form-group">
+      <label class="label">Name</label>
+      <input class="input form-control" type="text" id="body" placeholder="Name">
+      </div>
+
+      <div class="field form-group">
+      <label class="label" for="gametitle">Contact</label>
+      <input class="input form-control" id="title" type="text" placeholder="Contact Number">
+      </div>
+
+      <div class="field form-group">
+      <label class="label" for="price">Price</label>
+      <input class="input form-control" id="price" type="text" placeholder="Price">
+      </div>
+
+      <div class="field form-group">
+      <label class="label" for="category">Condition</label>
+      <select class="select form-control" id="condition"></select>
+      </div>
+
+      <br>
+
+      <div class="text-right ">
+      <button class="button is-link submit" type="submit">Submit</button>
+      </div>
+    </form>
+
+    </div>
+
+    </div>
+
+    <div class="column is-3">
+
+    <div class="notification">
+      <h1>Game Description</h1>
+      <br>
+      <p id="gameDescription" style="text-align: center; color:white;"></p>
+
+      <br>
+      <li>
+    <div>
+      <div id="ESRB"></div>
+      <div id="gameReleaseDate"></div>
+    </div>
+  </li>
+
+  <li>
+    <div>
+      <div id="gameDeveloper"></div>
+      <div id="gamePublisher"></div>
+    </div>
+  </li>
+  
+   <div>
+    <a href="#" target="_blank" id="gameWebsite"></a>
+    <a href="#" target="_blank" id="gameReddit"></a>
+  </div>
+    
+    </div>
+
+    </div>
+
+  </div>
+  </section>
+
+  </div>
+</div>
+
+<!--testingt
 <div id="gameName" style="text-align: center; color:white; font-size: 30px; background-color:black;"> </div>
 <img src="" alt="" id="gameIMG" style="height: 400px; width:600px; float:initial" />
 <div>
@@ -106,6 +214,7 @@
 
 
 </div>
+-->
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/game_detail.js"></script>
