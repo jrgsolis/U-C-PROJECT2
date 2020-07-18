@@ -25,7 +25,7 @@ You will need to npm install the following node modules:
 
 ## Screenshots
 **See Ubergames how it looks**
-![screenshot-1](/public/ubergames_ss.png)
+![screenshot-1](https://github.com/jrgsolis/U-C-PROJECT2/tree/master/public/img/ubergames_ss.png)
 
 
 ## Members
