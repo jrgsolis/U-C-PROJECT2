@@ -1,6 +1,11 @@
 ## Uber Games
+Ubergames is a community of gamers aiming to build the greatest resource for buying and selling games. The platform’s objective is to connect consumers with sellers to negotiate the best deal on their video game purchase.
 
-### Setup
+[Live Demo](https://ubergames.herokuapp.com/)
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development. I will assume that you already have [Node.js](https://nodejs.org/en/) and [MySQL](https://www.mysql.com/) installed locally. See deployment for notes on how to deploy the project on a live system.
 
 1. clone repo
 2. npm install
@@ -9,3 +14,23 @@
 4. update the config file with your sql credentials
 5. node ubergames.js
 
+### Dependencies
+You will need to npm install the following node modules:
+
+1.  express
+2.  express-handlebars
+4.  body-parser
+5.  mysql2
+6.  sequelize
+
+## Screenshots
+**See Ubergames how it looks**
+![screenshot-1](./public/ubergames_ss.png)
+
+
+## Members
+ We all worked together and coded in almost all areas as needed but if a specialization was given it would be as followed
+- [Jorge](https://github.com/ColinJohnson747) 
+- [Jennifer](https://github.com/jvernot) 
+- [Isaiah](https://github.com/Elliotmrgn) 
+- [Charlie](https://github.com/samuelguevara98) 
