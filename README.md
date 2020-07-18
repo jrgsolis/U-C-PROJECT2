@@ -23,14 +23,10 @@ You will need to npm install the following node modules:
 5.  mysql2
 6.  sequelize
 
-## Screenshots
-**See Ubergames how it looks**
-![screenshot-1](https://github.com/jrgsolis/U-C-PROJECT2/tree/master/public/img/ubergames_ss.png)
-
 
 ## Members
  We all worked together and coded in almost all areas as needed but if a specialization was given it would be as followed
-- [Jorge](https://github.com/ColinJohnson747) 
-- [Jennifer](https://github.com/jvernot) 
-- [Isaiah](https://github.com/Elliotmrgn) 
-- [Charlie](https://github.com/samuelguevara98) 
+- [Jorge](https://github.com/jrgsolis) 
+- [Jennifer](https://github.com/Jenniferveiga) 
+- [Isaiah](https://github.com/Isaiah361) 
+- [Charlie](https://github.com/cnara018) 
