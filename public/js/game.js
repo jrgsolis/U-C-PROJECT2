@@ -1,4 +1,4 @@
-// Game Cards index.html
+
 function disableBtns(data) {
     var disPrev = document.getElementById("prevBtn");
     var disNext = document.getElementById("nextBtn");
