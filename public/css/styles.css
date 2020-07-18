@@ -1,3 +1,4 @@
+
 html{
   position: relative;
   min-height: 100%;
@@ -51,9 +52,6 @@ html{
   max-width: 1280px;
 }
 
-
-
-
 .navbar-brand {
   padding-bottom: 15px;
 }
@@ -73,7 +71,6 @@ img#logo {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 * {
   margin: 0;

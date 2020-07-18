@@ -1,127 +1,125 @@
-<div class="container is-fluid">
-  <div class="hero-body">
-    <a href="/" ><h1 class="title" style = "text-align: center; color: white">UBER GAMES</h1></a>
-    <h2 class="subtitle" style = "text-align: center; color: white">The greatest resource for buying games!</h2>
+<div class="container is-fullhd">
+  <div class="container is-fluid">
+    <div class="hero-body">
+      <h1 class="title" style="text-align: center; color: white">
+        UBER GAMES
+      </h1>
 
-    <div class="columns">
+      <h2 class="subtitle" style="text-align: center; color: white">
+        The greatest resource for buying games!
+      </h2>
 
-  <div class="column is-4"></div>
-  <div class="column">
-    <a href="/post"><button class="button"><span class="fa fa-plus" ></span>Add New Listing</button></a>
-  </div>
-  <div class="column is-4">
-    <a href="/listings"><button class="button"><span class="fa fa-eye"></span> View all listings</button></a>
-  </div>
-  <div class="column"></div>
-</div>
-
-  </div>
+      <div class="column is-full">
+        <div class="column is-11 is-offset-4">
+          <a href="/post"><button class="button"><span class="fa fa-plus"></span>Add New Listing</button></a>
+          <a href="/listings"><button class="button"><span class="fa fa-eye"></span>All listings</button></a>
+        </div>
+      </div>
+    </div>
+  </div> 
 </div>
 
 <div id="gameName" style="text-align: center; color:white; font-size: 30px; background-color:black;"> </div>
 <img src="" alt="" id="gameIMG" style="height: 400px; width:600px; float:initial" />
 
 <div class="column is-half is-offset-one-quarter">
-
-  <ul>
-    <li id="gameDetails" ></li>
-    </ul>
-
-    <div style="align: center;">
-    
-    <div>
+  <ul><li id="gameDetails"></li></ul>
+  <div style="align: center;">
+    <div> 
       <h5 id="gameGenre"></h5>
     </div>
-    <div>
-      <h5 id="gamePlatform"></h5>
+    <div> 
+      <h5 id="gamePlatform"></h5> 
     </div>
-    
-    </div>
-
-    <ul>
+ </div>
+  <ul>
     <li id="gameMetacritic"></li>
-    </ul>
-
+  </ul>
 </div>
 
 
 <div class="container is-fluid">
   <div class="hero-body">
 
-<section class="section">
-  <div class="columns">
-    
-    <div class="column is-1">
-    <div class="notification">
+    <section class="section">
+      <div class="columns">
+        <div class="column is-1">
+          <div class="notification">
+            <form id="cms">
+              <h1 style="text-align: center;">Post Listing</h1>
+              <br>
+              <div class="field form-group">
+                <label class="label">Name</label>
+                <input class="input form-control" type="text" id="contact_name" placeholder="Name">
+              </div>
+              <div class="field form-group">
+                <label class="label" for="gametitle">Email</label>
+                <input class="input form-control" id="email" type="text" placeholder="Contact Number">
+              </div>
+              <div class="field form-group">
+                <label class="label" for="gametitle">Phone</label>
+                <input class="input form-control" id="phone" type="text" placeholder="Contact Number">
+              </div>
+              <div class="field form-group">
+                <label class="label" for="price">Price</label>
+                <input class="input form-control" id="price" type="text" placeholder="Price">
+              </div>
+              <div class="field form-group">
+                <label class="label" for="category">Condition</label>
+                <select class="select form-control" id="condition"></select>
+              </div>
+              <br>
 
-    <form id="cms">
-      <h1 style="text-align: center;">Post Listing</h1>
-      <br>
-      
-      <div class="field form-group">
-      <label class="label">Name</label>
-      <input class="input form-control" type="text" id="body" placeholder="Name">
+              <input id="description" type="hidden">
+              <input id="name" type="hidden">
+              <input id="slug" type="hidden" vaue="mario">
+              <input id="metacritic" type="hidden">
+              <input id="released" type="hidden">
+              <input id="background" type="hidden">
+              <input id="website" type="hidden">
+              <input id="gameid" type="hidden">
+              <div class="text-right ">
+                <button class="button is-link submit" type="submit">Submit</button>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+        <div class="column is-3">
+
+          <div class="notification">
+            <h1>Game Description</h1>
+            <br>
+            <p id="gameDescription" style="text-align: center; color:white;"></p>
+
+            <br>
+            <li>
+              <div>
+                <div id="ESRB"></div>
+                <div id="gameReleaseDate"></div>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <div id="gameDeveloper"></div>
+                <div id="gamePublisher"></div>
+              </div>
+            </li>
+
+            <div>
+              <a href="#" target="_blank" id="gameWebsite"></a>
+              <a href="#" target="_blank" id="gameReddit"></a>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
-
-      <div class="field form-group">
-      <label class="label" for="gametitle">Contact</label>
-      <input class="input form-control" id="title" type="text" placeholder="Contact Number">
-      </div>
-
-      <div class="field form-group">
-      <label class="label" for="price">Price</label>
-      <input class="input form-control" id="price" type="text" placeholder="Price">
-      </div>
-
-      <div class="field form-group">
-      <label class="label" for="category">Condition</label>
-      <select class="select form-control" id="condition"></select>
-      </div>
-
-      <br>
-
-      <div class="text-right ">
-      <button class="button is-link submit" type="submit">Submit</button>
-      </div>
-    </form>
-
-    </div>
-
-    </div>
-
-    <div class="column is-3">
-
-    <div class="notification">
-      <h1>Game Description</h1>
-      <br>
-      <p id="gameDescription" style="text-align: center; color:white;"></p>
-
-      <br>
-      <li>
-    <div>
-      <div id="ESRB"></div>
-      <div id="gameReleaseDate"></div>
-    </div>
-  </li>
-
-  <li>
-    <div>
-      <div id="gameDeveloper"></div>
-      <div id="gamePublisher"></div>
-    </div>
-  </li>
-  
-   <div>
-    <a href="#" target="_blank" id="gameWebsite"></a>
-    <a href="#" target="_blank" id="gameReddit"></a>
-  </div>
-    
-    </div>
-
-    </div>
-
-  </div>
-  </section>
+    </section>
 
   </div>
 </div>
@@ -153,7 +151,7 @@
   </div>
 
   <div class="column is-11 is-offset-1">
-    <p id="gameDescription" style="text-align: center; color:white;"></p>
+    <p id="›" style="text-align: center; color:white;"></p>
   </div>
 
   <div class="column is-11 is-offset-1">

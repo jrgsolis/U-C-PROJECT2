@@ -52,7 +52,7 @@ function getGenreCard(game) {
     return genreName;
 }
 
-function getReleaseDateCard(game) {
+function getReleaseDateCard(game) { 
     const releaseDate = document.createElement("p");
     releaseDate.setAttribute("class", "card-text");
     releaseDate.textContent = "Release Date: " + game.released;
@@ -90,6 +90,7 @@ function getReddit(data) {
 
 function getWebsite(data) {
     if (data.website) {
+        document.getElementById("website").value = data.website;
         document.getElementById("gameWebsite").href = data.website;
         document.getElementById("gameWebsite").innerHTML = data.website;
         document.getElementById("gameWebsite").style = "display: inline-block;";
@@ -100,8 +101,8 @@ function getWebsite(data) {
 
 function getReleaseDate(data) {
     if (data.released) {
-        document.getElementById("gameReleaseDate").innerHTML =
-            "Release Date: " + data.released;
+        document.getElementById("released").value ="" + data.released;
+        document.getElementById("gameReleaseDate").innerHTML ="Release Date: " + data.released;
         document.getElementById("gameReleaseDate").style = "display: flex;";
     } else {
         document.getElementById("gameReleaseDate").style = "display: none;";
@@ -110,7 +111,8 @@ function getReleaseDate(data) {
 
 function getGameDescription(data) {
     if (data.description) {
-        document.getElementById("gameDescription").innerHTML = data.description;
+        document.getElementById("description").value = data.description_raw;
+        document.getElementById("gameDescription").innerHTML = data.description_raw;
         document.getElementById("gameDescription").style = "display: block;";
     } else {
         document.getElementById("gameDescription").style = "display: none;";
@@ -119,6 +121,9 @@ function getGameDescription(data) {
 
 function getGameTitle(data) {
     if (data.name) {
+        document.getElementById("name").value = data.name;
+        document.getElementById("slug").value = data.slug;
+        document.getElementById("gameid").value = data.id;
         document.getElementById("gameName").innerHTML = data.name;
         document.getElementById("gameDetails").style = "display: flex;";
     } else {
@@ -138,6 +143,7 @@ function getESRB(data) {
 
 function getIMG(data) {
     if (data.background_image) {
+        document.getElementById("background").value = data.background_image;
         document.getElementById("gameIMG").src = data.background_image;
         document.body.style.backgroundImage = `url(${data.background_image})`;
     } else {
@@ -164,6 +170,7 @@ function getMetacritic(data) {
     var score = data.metacritic;
     if (!score) {
         metacriticColor = "#000000";
+        score = 50;
     }
     if (score > 61) {
         metacriticColor = "#66cc33;";
@@ -172,6 +179,7 @@ function getMetacritic(data) {
     } else {
         metacriticColor = "#ff0000;";
     }
+    document.getElementById("metacritic").value = ""+score;
     document.getElementById("gameMetacritic").innerHTML = score;
     document.getElementById("gameMetacritic").style =
         "padding: 0px; text-align: center; color: #ffffff; background-color: " +

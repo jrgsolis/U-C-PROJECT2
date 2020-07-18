@@ -1,8 +1,20 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Getting jQuery references to the post body, title, form, and condition select
-  var bodyInput = $("#body");
+  var contactNameInput = $("#contact_name");
+  var emailInput = $("#email");
+  var phoneInput = $("#phone");
   var priceInput = $("#price");
   var titleInput = $("#title");
+  var descriptionInput =  $("#description");
+  var nameInput= $("#name");
+  var slugInput = $("#slug"); 
+  var metacriticInput= $("#metacritic");
+  var releasedInput = $("#released");
+  var backgroundInput= $("#background");
+  var websiteInput= $("#website"); 
+  var gameidInput = $("#gameid");
+
+
   var cmsForm = $("#cms");
   var conditionSelect = $("#condition");
   // Adding an event listener for when the form is submitted
@@ -32,20 +44,51 @@ $(document).ready(function() {
   function handleFormSubmit(event) {
     event.preventDefault();
     // Wont submit the post if we are missing a body, title, or condition
+    /*
     if (!titleInput.val().trim() || !bodyInput.val().trim() || !conditionSelect.val()) {
       return;
     }
+    */
     // Constructing a newPost object to hand to the database
     var newPost = {
-      title: titleInput
+      contact_name: contactNameInput
         .val()
         .trim(),
-      body: bodyInput
+      email: emailInput
+        .val()
+        .trim(),
+      phone: phoneInput
+        .val()
+        .trim(),
+      price: priceInput
+        .val()
+        .trim(),
+      name: nameInput
+        .val()
+        .trim(),
+      slug: slugInput
+        .val()
+        .trim(),
+      description_raw: descriptionInput
+        .val()
+        .trim(),
+      metacritic: metacriticInput
+        .val()
+        .trim(),
+      released: releasedInput
+        .val()
+        .trim(),
+      background_image: backgroundInput
+        .val()
+        .trim(),
+      website: websiteInput
+        .val()
+        .trim(),
+      gameId: gameidInput
         .val()
         .trim(),
       ConditionId: conditionSelect.val(),
-      price: priceInput.val()
-      .trim(),
+      
     };
 
     // If we're updating a post run updatePost to update a post
@@ -61,7 +104,7 @@ $(document).ready(function() {
 
   // Submits a new post and brings user to dashboard page upon completion
   function submitPost(post) {
-    $.post("/api/posts", post, function() {
+    $.post("/api/posts", post, function () {
       window.location.href = "/listings";
     });
   }
@@ -79,7 +122,7 @@ $(document).ready(function() {
       default:
         return;
     }
-      $.get(queryUrl, function(data) {
+    $.get(queryUrl, function (data) {
       if (data) {
         console.log(data.ConditionId || data.id)
         // If this post exists, prefill our cms forms with its data
@@ -129,8 +172,8 @@ $(document).ready(function() {
       url: "/api/posts",
       data: post
     })
-    .then(function() {
-      window.location.href = "/listings";
-    });
+      .then(function () {
+        window.location.href = "/listings";
+      });
   }
 });

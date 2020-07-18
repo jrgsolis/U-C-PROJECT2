@@ -2,21 +2,12 @@ module.exports = function (sequelize, DataTypes) {
 
 
   const Post = sequelize.define("Post", {
-    title: {
+    contact_name: {
       type: DataTypes.STRING,
       allowNull: true,
       validate: {
         len: [1]
       }
-    },
-    body: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-      len: [1]
-    },
-    price: {
-      type: DataTypes.DECIMAL(10, 2),
-      allowNull: true
     },
     email: {
       type: DataTypes.STRING,
@@ -25,6 +16,10 @@ module.exports = function (sequelize, DataTypes) {
     phone: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+    price: {
+      type: DataTypes.DECIMAL(10, 2),
+      allowNull: true
     },
     name: {
       type: DataTypes.STRING,

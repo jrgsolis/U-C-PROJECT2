@@ -28,6 +28,27 @@ body {
   font-family: "Be Vietnam", sans-serif;
 }
 
+html{
+  position: relative;
+  min-height: 100%;
+
+  background-image: url("../img/ubergame_bg.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  background-size: cover;
+  background-position: center center;
+}
+
+
+
+
+
 
 #root {
   max-width: 1200px;

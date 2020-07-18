@@ -1,5 +1,5 @@
 <style>
-.fullscreen-bg {
+  .fullscreen-bg {
     position: fixed;
     top: 0;
     right: 0;
@@ -7,9 +7,9 @@
     left: 0;
     overflow: hidden;
     z-index: -100;
-}
+  }
 
-.fullscreen-bg__video {
+  .fullscreen-bg__video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -18,53 +18,54 @@
     min-width: 100%;
     min-height: 100%;
     -webkit-transform: translate(-50%, -50%);
-       -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-	    transform: translate(-50%, -50%);
-}
-
-@media (max-width: 767px) {
-  .fullscreen-bg {
-    background: url('../img/ubergame_bg.jpg') center center / cover no-repeat;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 
-  .fullscreen-bg__video {
-    display: none;
+  @media (max-width: 767px) {
+    .fullscreen-bg {
+      background: url('../img/ubergame_bg.jpg') center center / cover no-repeat;
+    }
+
+    .fullscreen-bg__video {
+      display: none;
+    }
   }
-}
 
-.content {
-  position: fixed;
-  bottom: -1;
-  background: rgba(228, 228, 228, 0.543);
-  color: black;
-  width: 100%;
-  padding: 20px;
-}
-
+  .content {
+    position: fixed;
+    bottom: -1;
+    background: rgba(228, 228, 228, 0.543);
+    color: black;
+    width: 100%;
+    padding: 20px;
+  }
 </style>
 
-    <div class="fullscreen-bg">
-    <video loop muted autoplay poster="../img/ubergame_bg.jpg" class="fullscreen-bg__video" id="myVideo">
-        <source src="../video/supermario.webm" type="video/webm">
-        <source src="../video/supermario.mp4" type="video/mp4">
-    </video>
+<div class="fullscreen-bg">
+  <video loop muted autoplay poster="../img/ubergame_bg.jpg" class="fullscreen-bg__video" id="myVideo">
+    <source src="../video/supermario.webm" type="video/webm">
+    <source src="../video/supermario.mp4" type="video/mp4">
+  </video>
 
   <div class="content">
-    <a href="/" ><h1 class="title" style = "text-align: center; color: black">UBER GAMES</h1></a>
-    <h2 class="subtitle" style = "text-align: center; color: black">The greatest resource for buying games!</h2>
+    <a href="/">
+      <h1 class="title" style="text-align: center; color: black">UBER GAMES</h1>
+    </a>
+    <h2 class="subtitle" style="text-align: center; color: black">The greatest resource for buying games!</h2>
 
     <div class="columns">
 
-  <div class="column is-4"></div>
-  <div class="column">
-    <a href="/post"><button class="button"><span class="fa fa-plus" ></span>Add New Listing</button></a>
-  </div>
-  <div class="column is-4">
-    <a href="/listings"><button class="button"><span class="fa fa-eye"></span> View all listings</button></a>
-  </div>
-  <div class="column"></div>
-</div>
+      <div class="column is-4"></div>
+      <div class="column">
+        <a href="/post"><button class="button"><span class="fa fa-plus"></span>Add New Listing</button></a>
+      </div>
+      <div class="column is-4">
+        <a href="/listings"><button class="button"><span class="fa fa-eye"></span> View all listings</button></a>
+      </div>
+      <div class="column"></div>
+    </div>
 
   </div>
 </div>
@@ -72,13 +73,5 @@
 
 
 <script>
-document.getElementById("myVideo").currentTime = 45;
+  document.getElementById("myVideo").currentTime = 45;
 </script>
-
-  
-
-        
-    
-            
-
-
