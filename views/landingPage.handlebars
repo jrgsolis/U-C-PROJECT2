@@ -41,6 +41,19 @@
     width: 100%;
     padding: 20px;
   }
+
+  #video_box {
+    float: left;
+  }
+
+  #video_overlays {
+    position: absolute;
+    float: left;
+    width: 640px;
+    min-height: 370px;
+    background-color: #000;
+    z-index: 300000;
+  }
 </style>
 
 <div class="fullscreen-bg">
@@ -66,11 +79,8 @@
       </div>
       <div class="column"></div>
     </div>
-
   </div>
-</div>
-</div>
-
+</div> 
 
 <script>
   document.getElementById("myVideo").currentTime = 45;
