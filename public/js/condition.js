@@ -38,9 +38,6 @@ $(document).ready(function() {
     var newTr = $("<tr>");
     newTr.data("condition", conditionData);
     newTr.append("<td>" + conditionData.name + "</td>");
-    newTr.append("<td># of posts will display when we learn joins in the next activity!</td>");
-    newTr.append("<td><a href='/dashboard?condition_id=" + conditionData.id + "'>Go to Posts</a></td>");
-    newTr.append("<td><a href='/cms?condition_id=" + conditionData.id + "'>Create a Post</a></td>");
     newTr.append("<td><a style='cursor:pointer;color:red' class='delete-condition'>Delete Condition</a></td>");
     return newTr;
   }
