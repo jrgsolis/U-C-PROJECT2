@@ -30,3 +30,4 @@ You will need to npm install the following node modules:
 - [Jennifer](https://github.com/Jenniferveiga) 
 - [Isaiah](https://github.com/Isaiah361) 
 - [Charlie](https://github.com/cnara018) 
+- [Rudi](https://github.com/rudidankk)
